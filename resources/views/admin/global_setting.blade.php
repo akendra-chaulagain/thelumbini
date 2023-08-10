@@ -120,10 +120,10 @@
                     <input type="file" id="site_logo_nepali" name="site_logo_nepali" class="form-control">
                 </div> --}}
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <img src="{{ asset('/uploads/icons/' . $global_setting->site_logo_nepali) }}" width="150px"
                         class="img-responsive img-thumbnail">
-                </div>
+                </div> --}}
 
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary" id="save_global">Save</button>
