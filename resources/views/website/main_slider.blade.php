@@ -21,7 +21,7 @@
 
 
 {{-- features news start --}}
-<p>lorem1000</p>
+
 
 
 <section>
