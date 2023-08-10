@@ -15022,3 +15022,10 @@ body.offcanvas-active {
         display: flex;
         line-height: 18px;
     }
+
+
+    /* logo */
+    .header_image_logo img{
+   height: 90px;
+    width: 265px;
+    }

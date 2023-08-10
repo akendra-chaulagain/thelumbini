@@ -155,7 +155,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </div>
                     </div>
-                    <figure class="mb-0 mx-auto">
+                    <figure class="mb-0 mx-auto header_image_logo">
                         <a href="/">
                             {{-- <img src="/website/images/logo1.png" alt="" class="img-fluid logo"> --}}
                             <img src="/uploads/icons/{{ $global_setting->site_logo }}" alt="_logo"
