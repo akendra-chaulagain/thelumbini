@@ -73,11 +73,11 @@
                         value="{{ $global_setting->linkedin }}">
                 </div>
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <label for="other">Map Link(Iframe)</label>
                     <input style="height: 70px" type="text" id="other" name="page_keyword" class="form-control"
                         placeholder="url" value="{{ $global_setting->page_keyword }}">
-                </div>
+                </div> --}}
                 <div class="form-group col-md-6">
                     <label for="page_title">Page Title</label>
                     <input type="text" id="page_title" name="page_title" class="form-control"
