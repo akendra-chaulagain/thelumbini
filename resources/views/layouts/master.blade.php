@@ -15,9 +15,6 @@
         $seo = $job;
     }
     
-    
-    
-    
 @endphp
 
 
@@ -67,9 +64,13 @@
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ '/uploads/icons/' . $global_setting->favicon }}" type="image/png">
 
+
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,500&amp;family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,400&amp;display=swap"
         rel="stylesheet">
+    <link href="/website/css/styles3875.css?1fcca2a2c42e9d47a3eb" rel="stylesheet">
+
     <!-- fontawsome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -77,7 +78,6 @@
 
 
 
-    <link href="/website/css/styles3875.css?1fcca2a2c42e9d47a3eb" rel="stylesheet">
 
 
 
@@ -120,7 +120,7 @@
                         <div class="list-unstyled topbar-right">
 
                             <ul class="topbar-sosmed">
-                             
+
 
 
 
@@ -159,7 +159,7 @@
                         <a href="/">
                             {{-- <img src="/website/images/logo1.png" alt="" class="img-fluid logo"> --}}
                             <img src="/uploads/icons/{{ $global_setting->site_logo }}" alt="_logo"
-                                     class="img-fluid logo"/>
+                                class="img-fluid logo" />
                         </a>
                     </figure>
 
@@ -181,7 +181,7 @@
                                 <li class="  @if ($menu->nav_name == 'प्रदेश') nav-item dropdown @else @endif  "
                                     @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif>
                                     <a class="nav-link active 
-                                        @if ($menu->nav_name == 'प्रदेश') dropdown-toggle  @else    @endif  " 
+                                        @if ($menu->nav_name == 'प्रदेश') dropdown-toggle  @else @endif  "
                                         {{-- data-toggle="dropdown" --}}
                                         @if ($submenus->count() > 0) href="{{ route('category', $menu->nav_name) }}" @else href="  
                                     {{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}
@@ -220,7 +220,7 @@
 
         <!-- Navbar sidebar menu  -->
 
-        
+
 
         {{-- fetures news --}}
 
@@ -228,7 +228,7 @@
             <div class="modal-dialog modal-dialog-aside" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <div class="widget__form-search-bar  ">
+                        {{-- <div class="widget__form-search-bar  ">
                             <div class="row no-gutters">
                                 <div class="col">
                                     <input class="form-control border-secondary border-right-0 rounded-0"
@@ -240,7 +240,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -267,7 +267,7 @@
                                     <li class="nav-item dropdown" @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif>
 
                                         <a class="nav-link  text-dark 
-                                        @if ($menu->nav_name == 'प्रदेश') dropdown-toggle  href="#" data-toggle="dropdown"  @else   @endif "  
+                                        @if ($menu->nav_name == 'प्रदेश') dropdown-toggle  href="#" data-toggle="dropdown"  @else @endif "
                                             @if ($submenus->count() > 0) href="{{ route('category', $menu->nav_name) }}" @else href="  
                                     {{ route('category', $menu->nav_name) }} " @endif>{{ $menu->caption }}
 
@@ -443,7 +443,7 @@
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
                                         <span>
-                                            Copyright © 2023
+                                            Copyright © 2023 The Lumbini All Rights Reserved.
                                         </span>
                                     </li>
                                 </ul>
@@ -465,13 +465,7 @@
 
 <!--jQuery, Bootstrap and other vendor JS-->
 <script src="/website/js/index.bundle3875.js?1fcca2a2c42e9d47a3eb"></script>
-
-
 {{-- nepali time --}}
-
-<script src="https://unpkg.com/nepali-date-converter@1.1.2/dist/nepali-date-converter.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/nepali-date/dist/nepali-date.js"></script>
-
 
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
