@@ -22,8 +22,6 @@
 
 {{-- features news start --}}
 
-
-
 <section>
     <!-- Popular news  header-->
     <div class="popular__news-header">
