@@ -139,7 +139,7 @@
                                         </ul>
                                         <h5>
                                             <a href="/detail/{{ $features_item->nav_name }}">
-                                                {{ Str::limit($features_item->short_content, 52) }}
+                                                {!! Str::limit($features_item->short_content, 52) !!}
 
                                                 {{-- {!! $features_item->short_content !!} --}}
                                             </a>
