@@ -13953,6 +13953,7 @@ body.offcanvas-active {
     background-color: #fff;
     box-shadow: 0 2px 3px rgba(100, 100, 100, 0.1);
     font-size: 14px;
+    
 }
 .navbar-soft .navbar-toggler {
     color: rgba(0, 0, 0, 0.5);

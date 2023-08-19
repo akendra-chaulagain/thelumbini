@@ -1,9 +1,21 @@
 {{-- features news start --}}
+@php
+    
+    $all_ads_4 = App\Models\Navigation::query()
+        // ->where('nav_category', 'Home')
+        ->where('page_type', '=', 'Ads')
+        ->where('page_status', '1')
+        ->where('position', '4')
+        // ->orderBy('position', 'ASC')
+        ->first();
+    
+@endphp
+
 
 
 <section>
 
-   
+
     {{-- feature news --}}
     <div class="popular__news-header-carousel">
         <div class="container">
@@ -63,8 +75,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="ads_after_features_news">
-                        <img src="https://highspeednepal.com/wp-content/uploads/2020/11/98BwRmkpauM8.gif"
-                            alt="">
+                        <a target="_blank" href="{{ $all_ads_4->extra_one ?? ' ' }}">
+                            <img src="{{ $all_ads_4->banner_image ?? '' }}" alt="">
+                        </a>
+
                     </div>
                 </div>
 

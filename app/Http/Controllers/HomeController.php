@@ -18,7 +18,6 @@ class HomeController extends Controller
 
 
 
-      
 
         // $monthly_data = Navigation::find($mainitem_item->id)->where('page_type','Monthly Analysis');
 
@@ -302,9 +301,6 @@ class HomeController extends Controller
             // return $notice_heading;
             //return $notice_heading;
             return view("website.notice")->with(['notice_heading' => $notice_heading, 'notices' => $notices, 'jobs' => $jobs, 'menus' => $menus, 'sliders' => $sliders, 'about' => $About, 'global_setting' => $global_setting, 'slug_detail' => $slug_detail]);
-
-
-
         } elseif ($category_type == "Normal") {
             // return $category_id->get->childs;
             $category = Navigation::find($category_id)->id;

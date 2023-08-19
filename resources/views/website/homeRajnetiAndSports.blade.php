@@ -1,3 +1,19 @@
+@php
+    
+    $all_ads_3 = App\Models\Navigation::query()
+        // ->where('nav_category', 'Home')
+        ->where('page_type', '=', 'Ads')
+        ->where('page_status', '1')
+        ->where('position', '3')
+        // ->orderBy('position', 'ASC')
+        ->first();
+    
+@endphp
+
+
+
+
+
 <div class="popular__section-news">
     <div class="container">
         <div class="row">
@@ -78,11 +94,11 @@
                                             by {{ $sports_item->icon_image_caption }}
                                         </a>
                                     </li> --}}
-									 <li class="list-inline-item">
-                                                    <span>
-                                                        {{ $rajnitis_item->page_keyword }}
-                                                    </span>
-                                                </li>
+                                    <li class="list-inline-item">
+                                        <span>
+                                            {{ $rajnitis_item->page_keyword }}
+                                        </span>
+                                    </li>
                                 </ul>
 
                             </div>
@@ -95,16 +111,20 @@
 
                     </div>
 
-					{{-- after sports ads --}}
+                    {{-- after sports ads --}}
 
 
-					   <section class="bg-light">
+                    <section class="bg-light">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="ads_after_sports">
-                                        <img src="https://highspeednepal.com/wp-content/uploads/2020/11/274234202_107094378572114_5177004768489052758_n.jpg"
-                                            alt="">
+
+                                        <a target="_blank" href="{{ $all_ads_3->extra_one ?? ' ' }}">
+                                            <img src="{{ $all_ads_3->banner_image ?? '' }}"
+                                                alt="">
+                                        </a>
+
                                     </div>
                                 </div>
 

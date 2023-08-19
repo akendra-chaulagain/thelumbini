@@ -29,7 +29,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="off" onkeyup="handleKeyUp(event)">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -38,7 +38,13 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">Username</label>
 
+                            <div class="col-md-6">
+                                <input id="username" type="text" name="username" class="form-control @error('email') is-invalid @enderror">
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -74,4 +80,17 @@
         </div>
     </div>
 </div>
+<script>
+    function handleKeyUp(event) {
+        const inputValue = event.target.value;
+        // alert(inputValue)
+        const outputElement = document.getElementById('username');
+
+
+        const atIndex = inputValue.indexOf('@');
+        const username = atIndex !== -1 ? inputValue.substring(0, atIndex) : inputValue;
+        outputElement.value = username;
+    }
+</script>
+
 @endsection

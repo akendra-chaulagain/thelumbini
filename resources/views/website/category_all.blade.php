@@ -10,6 +10,36 @@
         ->get();
     
     // return $quick_links;
+
+
+
+
+
+
+
+   
+    
+    $all_ads_9 = App\Models\Navigation::query()
+        // ->where('nav_category', 'Home')
+        ->where('page_type', '=', 'Ads')
+        ->where('page_status', '1')
+        ->where('position', '9')
+        // ->orderBy('position', 'ASC')
+        ->first();
+    
+    $all_ads_10 = App\Models\Navigation::query()
+        // ->where('nav_category', 'Home')
+        ->where('page_type', '=', 'Ads')
+        ->where('page_status', '1')
+        ->where('position', '10')
+        // ->orderBy('position', 'ASC')
+        ->first();
+    
+
+
+
+
+
     
 @endphp
 
@@ -164,8 +194,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="after_text_ads">
-                                        <img src="https://highspeednepal.com/wp-content/uploads/2021/02/Front-1230x1003-1.gif"
-                                            alt="">
+                                         <a target="_blank" href="{{ $all_ads_9->extra_one ?? ' ' }}">
+                                                <img src="{{ $all_ads_9->banner_image ?? '' }}" alt="">
+                                            </a>
                                     </div>
                                 </div>
 
@@ -242,8 +273,9 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="sidebar_ads">
-                                                <img src="https://highspeednepal.com/wp-content/uploads/2020/04/Nepatop-sab-thik-thak-250x250-3092020043952.gif"
-                                                    alt="">
+                                                <a target="_blank" href="{{ $all_ads_10->extra_one ?? ' ' }}">
+                                                <img src="{{ $all_ads_10->banner_image ?? '' }}" alt="">
+                                            </a>
                                             </div>
                                         </div>
 

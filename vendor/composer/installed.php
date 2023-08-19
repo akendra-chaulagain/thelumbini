@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '76899a6c5b6ad8cf82049c50e5e726dc8b48691e',
+        'reference' => 'dc40c601f2ed07a0aef4c0bc5d21d50dad78fbe0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -402,7 +402,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '76899a6c5b6ad8cf82049c50e5e726dc8b48691e',
+            'reference' => 'dc40c601f2ed07a0aef4c0bc5d21d50dad78fbe0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -659,6 +659,15 @@
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'pratiksh/nepalidate' => array(
+            'pretty_version' => 'v1.4.2',
+            'version' => '1.4.2.0',
+            'reference' => '831747f80eb416c19701cd08b3956d4ffb2ab512',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pratiksh/nepalidate',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'psr/container' => array(
             'pretty_version' => '1.1.2',

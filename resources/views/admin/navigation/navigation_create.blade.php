@@ -77,19 +77,19 @@
                             required="required">
                     </div>
                     <!--------hide nepale
-                        @if ($category == 'SNS')
+                            @if ($category == 'SNS')
     'SNS'
-                        <div class="form-group col-md-6">
-                            <label for="caption_nepali">Icon (eg: fa fa-facebook / fab fa facebook)</label>
-                            <input class="form-control {{ $errors->has('caption_nepali') ? 'has-error' : '' }}" type="text" id="caption_nepali" name="caption_nepali" placeholder="Icon class" value="{{ old('caption_nepali') }}">
-                        </div>
+                            <div class="form-group col-md-6">
+                                <label for="caption_nepali">Icon (eg: fa fa-facebook / fab fa facebook)</label>
+                                <input class="form-control {{ $errors->has('caption_nepali') ? 'has-error' : '' }}" type="text" id="caption_nepali" name="caption_nepali" placeholder="Icon class" value="{{ old('caption_nepali') }}">
+                            </div>
 @else
     <div class="form-group col-md-6">
-                            <label for="caption_nepali">Nepali Caption <i class="reqr">*</i> (Page/Navigation Title)</label>
-                            <input class="form-control {{ $errors->has('caption_nepali') ? 'has-error' : '' }}" type="text" id="caption_nepali" name="caption_nepali" placeholder="Nepali Caption" value="{{ old('caption_nepali') }}" required="required">
-                        </div>
+                                <label for="caption_nepali">Nepali Caption <i class="reqr">*</i> (Page/Navigation Title)</label>
+                                <input class="form-control {{ $errors->has('caption_nepali') ? 'has-error' : '' }}" type="text" id="caption_nepali" name="caption_nepali" placeholder="Nepali Caption" value="{{ old('caption_nepali') }}" required="required">
+                            </div>
     @endif
-                        ------hide nepali--->
+                            ------hide nepali--->
 
                     <div id="url_link_div" class="form-group col-md-10" style="display: none;">
                         <label for="link_url">URL Link <i class="reqr">*</i></label>
@@ -110,24 +110,24 @@
                             placeholder="Short Content">{{ old('short_content') }}</textarea>
                     </div>
                     <!----hide
-                        <div id="short_content_nepali_div" class="form-group col-md-12">
-                            <label for="short_content_nepali">Nepali Short Content</label>
-                            <textarea class="form-control ckeditor" id="short_content_nepali" name="short_content_nepali" rows="5"
-                                placeholder="Short Content">{{ old('short_content_nepali') }}</textarea>
-                        </div>
-                        -----hide---->
+                            <div id="short_content_nepali_div" class="form-group col-md-12">
+                                <label for="short_content_nepali">Nepali Short Content</label>
+                                <textarea class="form-control ckeditor" id="short_content_nepali" name="short_content_nepali" rows="5"
+                                    placeholder="Short Content">{{ old('short_content_nepali') }}</textarea>
+                            </div>
+                            -----hide---->
                     <div id="long_content_div" class="form-group col-md-12">
                         <label for="long_content">Main Content</label>
                         <textarea class="form-control ckeditor" id="long_content" name="long_content" rows="10"
                             placeholder="Main Content">{{ old('long_content') }}</textarea>
                     </div>
                     <!-----hide----
-                         <div id="long_content_nepali_div" class="form-group col-md-12">
-                            <label for="long_content_nepali">Nepali Main Content</label>
-                            <textarea class="form-control ckeditor" id="long_content_nepali" name="long_content_nepali" rows="10"
-                                placeholder="Main Content">{{ old('long_content_nepali') }}</textarea>
-                        </div>
-                        ----->
+                             <div id="long_content_nepali_div" class="form-group col-md-12">
+                                <label for="long_content_nepali">Nepali Main Content</label>
+                                <textarea class="form-control ckeditor" id="long_content_nepali" name="long_content_nepali" rows="10"
+                                    placeholder="Main Content">{{ old('long_content_nepali') }}</textarea>
+                            </div>
+                            ----->
 
                 </div>
 
@@ -152,7 +152,7 @@
                     <?php $page_types = App\Models\PageType::get(); ?>
 
 
-                    
+
                     <div class="form-group col-md-12">
                         <label for="page_type">Page Type <i class="reqr">*</i></label>
                         <select class="form-control" name="page_type" id="page_type" required=""
@@ -205,9 +205,10 @@
 
 
                     <div class="form-group col-md-12">
-                <label for="banner_image">Banner Image <span style="color: red">( image must be less then 1MB )</span></label>
-                    <input class="form-control" type="file" id="banner_image" name="banner_image">
-            </div>
+                        <label for="banner_image">Banner Image <span style="color: red">( image must be less then 1MB
+                                )</span></label>
+                        <input class="form-control" type="file" id="banner_image" name="banner_image">
+                    </div>
 
 
 
@@ -236,7 +237,11 @@
                             placeholder="Page Keywords" value="">
                     </div>
 
-
+                    <div class="form-group col-md-12">
+                        <label for="extra_one">Ads link</label>
+                        <input class="form-control" type="text" id="extra_one" name="extra_one"
+                            placeholder="facebook link">
+                    </div>
 
                     {{-- <div class="form-group col-md-12">
                     <label for="extra_one">Facebook link</label>

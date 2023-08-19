@@ -106,6 +106,7 @@
 
                                 <div class="nepali-timer" id="nepaliTimer">
                                     <!-- Nepali time and date will be displayed here -->
+
                                 </div>
 
 
@@ -161,7 +162,14 @@
                             <img src="/uploads/icons/{{ $global_setting->site_logo }}" alt="_logo"
                                 class="img-fluid logo" />
                         </a>
+                        <div class="nepaliTimer">
+                            <iframe scrolling="no" border="0" frameborder="0" marginwidth="0" marginheight="0"
+                                allowtransparency="true"
+                                src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&font_color=333333&aj_time=yes&font_size=14&line_brake=0&bikram_sambat=0&api=511189n453"
+                                width="300" height="18" ampm=1 ></iframe>
+                        </div>
                     </figure>
+
 
                 </div>
             </nav>

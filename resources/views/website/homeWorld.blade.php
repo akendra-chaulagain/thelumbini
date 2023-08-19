@@ -1,3 +1,25 @@
+@php
+    
+    $all_ads_5 = App\Models\Navigation::query()
+        // ->where('nav_category', 'Home')
+        ->where('page_type', '=', 'Ads')
+        ->where('page_status', '1')
+        ->where('position', '5')
+        // ->orderBy('position', 'ASC')
+        ->first();
+    
+    $all_ads_6 = App\Models\Navigation::query()
+        // ->where('nav_category', 'Home')
+        ->where('page_type', '=', 'Ads')
+        ->where('page_status', '1')
+        ->where('position', '6')
+        // ->orderBy('position', 'ASC')
+        ->first();
+    
+@endphp
+
+
+
 <div class="popular__section-news">
     <div class="container">
         <div class="row">
@@ -49,32 +71,34 @@
 
             <div class="col-md-12 col-lg-4">
                 <aside class="wrapper__list__article">
-                
-                   
-				
+
+
+
                     {{-- world side ads --}}
 
 
-					   <section class="bg-light">
+                    <section class="bg-light">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="world_sidebar_ads_1">
-                                        <img src="https://highspeednepal.com/wp-content/uploads/2020/11/274234202_107094378572114_5177004768489052758_n.jpg"
-                                            alt="">
+                                        <a target="_blank" href="{{ $all_ads_5->extra_one ?? ' ' }}">
+                                            <img src="{{ $all_ads_5->banner_image ?? '' }}" alt="">
+                                        </a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </section>
-                      <section class="bg-light">
+                    <section class="bg-light">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="world_sidebar_ads_2">
-                                        <img src="https://highspeednepal.com/wp-content/uploads/2021/02/Salesberry-logos_300x150px1-e1651542039590.jpg"
-                                            alt="">
+                                        <a target="_blank" href="{{ $all_ads_6->extra_one ?? ' ' }}">
+                                            <img src="{{ $all_ads_6->banner_image ?? '' }}" alt="">
+                                        </a>
                                     </div>
                                 </div>
 

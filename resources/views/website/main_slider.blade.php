@@ -1,4 +1,26 @@
+@php
+    
+    $all_ads_1 = App\Models\Navigation::query()
+        // ->where('nav_category', 'Home')
+        ->where('page_type', '=', 'Ads')
+        ->where('page_status', '1')
+        ->where('position', '1')
+        // ->orderBy('position', 'ASC')
+        ->first();
+    
+@endphp
 
+@php
+    
+    $all_ads_2 = App\Models\Navigation::query()
+        // ->where('nav_category', 'Home')
+        ->where('page_type', '=', 'Ads')
+        ->where('page_status', '1')
+        ->where('position', '2')
+        // ->orderBy('position', 'ASC')
+        ->first();
+    
+@endphp
 
 
 {{-- for ads --}}
@@ -8,8 +30,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="for_topbar_ads">
-                    <img src="https://highspeednepal.com/wp-content/uploads/2020/02/mahendra-1230_100-Pixel-Bolero-Udemsil-Nepali.jpg"
-                        alt="">
+                    <a target="_blank" href="{{ $all_ads_1->extra_one ?? "" }}">
+                        <img src="{{ $all_ads_1->banner_image ?? " " }}" alt="">
+                    </a>
+
                 </div>
             </div>
 
@@ -30,7 +54,7 @@
 
 
                 <div class="col-md-12 ">
-                   
+
                     <div class="card__post-carousel">
 
                         @foreach ($sliders as $sliders_item)
@@ -78,14 +102,14 @@
             </div>
         </div>
     </div>
-{{-- feature news --}}
+    {{-- feature news --}}
     <div class="popular__news-header-carousel">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                     <div class="wrapper__list__article">
-							<h4 class="border_section">फिचर न्युज</h4>
-						</div>
+                    <div class="wrapper__list__article">
+                        <h4 class="border_section">फिचर न्युज</h4>
+                    </div>
                     <div class="top__news__slider">
 
                         @foreach ($features_news as $features_item)
@@ -115,7 +139,7 @@
                                         </ul>
                                         <h5>
                                             <a href="/detail/{{ $features_item->nav_name }}">
-                                                 {{ Str::limit($features_item->short_content, 52) }}
+                                                {{ Str::limit($features_item->short_content, 52) }}
 
                                                 {{-- {!! $features_item->short_content !!} --}}
                                             </a>
@@ -133,18 +157,19 @@
 
 
     <section class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="ads_after_features_news">
-                    <img src="https://highspeednepal.com/wp-content/uploads/2020/11/98BwRmkpauM8.gif"
-                        alt="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ads_after_features_news">
+                           <a target="_blank" href="{{ $all_ads_2->extra_one ?? "" }}">
+                        <img src="{{ $all_ads_2->banner_image ?? " " }}" alt="">
+                    </a>
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 

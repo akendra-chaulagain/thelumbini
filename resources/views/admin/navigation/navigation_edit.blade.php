@@ -309,6 +309,13 @@
                         placeholder="Page Keywords" value="{{ $navigation->page_keyword }}">
                 </div>
 
+                <div class="form-group col-md-12">
+                    <label for="extra_one">Ads link</label>
+                    <input class="form-control" type="text" id="extra_one" name="extra_one"
+                        placeholder="facebook link" value="{{ $navigation->extra_one }}">
+                </div>
+
+
                 {{-- <div class="form-group col-md-12">
                     <label for="extra_one">Facebook link</label>
                     <input class="form-control" type="text" id="extra_one" name="extra_one"
